@@ -5,11 +5,14 @@
   /* outline: 1px solid red; */
 }
 
+body {
+  
+}
+
 .container {
   text-align: center;
   display: grid; 
   grid-template-columns: 1fr 4fr;
-  grid-template-rows: 100px 100px 1fr 100px;
   gap: 4px;
 }
 
@@ -80,7 +83,16 @@
 }
 
 .nav {
+  grid-row: 2 / 3;
+  grid-column: 2 / 3;
   background-color: #C50208;
+}
+
+.nav ul {
+  display: grid;
+  list-style: none;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .nav ul li {
@@ -91,7 +103,10 @@
 .article {
   background-color: #bccbde;
   grid-column: 2/3;
-  grid-row: 3/4
+  grid-row: 3/4;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
 }
 
 .article p {
@@ -105,6 +120,7 @@
   background-color: #FFFFFF;
   color: black;
   text-align: center;
+  height: 200px;
 }
 
 .card p {
